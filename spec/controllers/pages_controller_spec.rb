@@ -28,8 +28,7 @@ describe PagesController do
     it "should have the right title" do
     	get 'contact'
     	response.should have_tag("title", @base_title + " | Contact")
-
-	end
+	  end
   end
   
    describe "GET 'about'" do
@@ -41,7 +40,7 @@ describe PagesController do
     it "should have the right title" do
     	get 'about'
     	response.should have_tag("title", @base_title + " | About")
-	end
+	  end
   end
   
   describe "GET 'help'" do
@@ -53,7 +52,7 @@ describe PagesController do
   	it "should have the right title" do
   		get 'help'
   		response.should have_tag("title", @base_title + " | Help")
-	end
+	  end
   end
   		
 end

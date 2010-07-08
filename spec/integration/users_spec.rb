@@ -36,8 +36,8 @@ describe "Users" do
     
     describe "failure" do
       it "should not sign a user in" do
-        @attr = { :email => "", :password => ""}
-        integration_sign_in(User.create(@attr))
+        @invalid_attr = { :email => "", :password => ""}
+        integration_sign_in(User.create(@invalid_attr))
         response.should render_template('sessions/new')
         response.should have_tag("div.flash.error", /invalid/i)
       end
